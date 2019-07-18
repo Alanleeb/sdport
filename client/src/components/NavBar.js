@@ -29,6 +29,20 @@ class NavBar extends Component {
       </Menu.Menu>
     );
   }
+  leftNavs = () => {
+    const { user, dispatch, history } = this.props;
+
+
+    if (user.id) {
+      return (
+        <Menu.Menu>
+          <Link to='/profile'>
+          <Menu.Item name='Profile' />
+        </Link>
+        </Menu.Menu>
+      )
+    }
+  }
 
   render() {
     return (
@@ -37,6 +51,7 @@ class NavBar extends Component {
           <Link to='/'>
             <Menu.Item name='home' />
           </Link>
+          { this.leftNavs() }
           { this.rightNavs() }
         </Menu>
       </div>
