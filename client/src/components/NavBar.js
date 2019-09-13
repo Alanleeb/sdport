@@ -39,6 +39,9 @@ class NavBar extends Component {
           <Link to='/profile'>
           <Menu.Item name='Profile' />
         </Link>
+        <Link to='/general'>
+          <Menu.Item name='General' />
+        </Link>
         </Menu.Menu>
       )
     }
